@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// being used for visual purposes, it spawns clouds :)
+/// </summary>
 public class CloudSpawner : MonoBehaviour
 {
     public GameObject prefabToSpawn;
