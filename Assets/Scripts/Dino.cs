@@ -4,5 +4,59 @@ using UnityEngine;
 
 public class Dino : MonoBehaviour
 {
-    // This is the "player" class
+    private Rigidbody2D _rb;
+    public Animator animator;
+
+    [SerializeField] private float jumpForce;
+
+    private bool _isGrounded;
+    private bool _isDead;
+
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        Time.timeScale = 1;
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && _isGrounded)
+        {
+            Jump();
+        }
+
+        animator.SetBool("_isGrounded",_isGrounded);
+    }
+
+    private void Jump()
+    {
+        _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    }
+
+    private void Death()
+    {
+        _isDead = true;
+        Time.timeScale = 0;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            _isGrounded = true;
+        }
+
+        if (collision.gameObject.tag == "Spike")
+        {
+            Death();
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            _isGrounded = false;
+        }
+    }
 }

@@ -30,8 +30,8 @@ public class CloudSpawner : MonoBehaviour
             
             Rigidbody2D rb = spawnedObject.AddComponent<Rigidbody2D>();
             rb.gravityScale = 0f;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
 
-            
             rb.velocity = new Vector2(-moveSpeed, 0f);
 
             Destroy(spawnedObject, destroyDelay);
