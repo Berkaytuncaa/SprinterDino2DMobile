@@ -8,12 +8,4 @@ public class Spike : MonoBehaviour
     {
         Destroy(gameObject, 8);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(collision.gameObject);
-        }
-    }
 }
