@@ -494,7 +494,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1911328626}
         m_TargetAssemblyTypeName: SfxPlayer, Assembly-CSharp
-        m_MethodName: Button
+        m_MethodName: Start
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1693,6 +1693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   src: {fileID: 1694191791}
   sfx: {fileID: 8300000, guid: 5ee305805ea234f12816b87bc05d8dd2, type: 3}
+  playSfx: {fileID: 8300000, guid: 496b8bb13fae54f418995406cca2bf4c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -7,6 +7,13 @@ public class Dino : MonoBehaviour
     private Rigidbody2D _rb;
     public Animator animator;
 
+    public GameManager gm;
+
+    public AudioSource src;
+    public AudioClip jumpSfx;
+    public AudioClip scoreSfx;
+    public AudioClip deathSfx;
+
     [SerializeField] private float jumpForce;
 
     private bool _isGrounded;
@@ -30,6 +37,8 @@ public class Dino : MonoBehaviour
     private void Jump()
     {
         _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        src.clip = jumpSfx;
+        src.Play();
     }
 
     private void Death()
@@ -47,6 +56,9 @@ public class Dino : MonoBehaviour
         if (collision.gameObject.tag == "Spike")
         {
             // TODO: set death screen active here
+            src.clip = deathSfx;
+            src.Play();
+
             Death();
         }
     }
@@ -56,6 +68,16 @@ public class Dino : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             _isGrounded = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "ScoreArea")
+        {
+            //gm.UpdateScore();
+            src.clip = scoreSfx;
+            src.Play();
         }
     }
 }
