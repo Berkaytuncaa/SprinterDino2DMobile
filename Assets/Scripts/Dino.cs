@@ -10,7 +10,6 @@ public class Dino : MonoBehaviour
     [SerializeField] private float jumpForce;
 
     private bool _isGrounded;
-    private bool _isDead;
 
     private void Start()
     {
@@ -35,7 +34,6 @@ public class Dino : MonoBehaviour
 
     private void Death()
     {
-        _isDead = true;
         Time.timeScale = 0;
     }
 
@@ -48,6 +46,7 @@ public class Dino : MonoBehaviour
 
         if (collision.gameObject.tag == "Spike")
         {
+            // TODO: set death screen active here
             Death();
         }
     }
