@@ -73,7 +73,7 @@ public class Dino : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "ScoreArea")
+        if (collision.gameObject.tag == "Score")
         {
             //gm.UpdateScore();
             src.clip = scoreSfx;
