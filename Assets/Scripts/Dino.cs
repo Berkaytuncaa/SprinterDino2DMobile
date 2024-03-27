@@ -9,6 +9,8 @@ public class Dino : MonoBehaviour
 
     public GameManager gm;
 
+    public GameObject deathScreen;
+
     public AudioSource src;
     public AudioClip jumpSfx;
     public AudioClip scoreSfx;
@@ -44,6 +46,7 @@ public class Dino : MonoBehaviour
     private void Death()
     {
         Time.timeScale = 0;
+        deathScreen.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -55,7 +58,6 @@ public class Dino : MonoBehaviour
 
         if (collision.gameObject.tag == "Spike")
         {
-            // TODO: set death screen active here
             src.clip = deathSfx;
             src.Play();
 
@@ -75,7 +77,7 @@ public class Dino : MonoBehaviour
     {
         if (collision.gameObject.tag == "Score")
         {
-            //gm.UpdateScore();
+            gm.UpdateScore();
             src.clip = scoreSfx;
             src.Play();
         }
