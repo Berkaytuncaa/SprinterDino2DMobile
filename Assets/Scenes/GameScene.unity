@@ -264,7 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 79735095}
-  - component: {fileID: 79735094}
+  - component: {fileID: 79735096}
   m_Layer: 0
   m_Name: SpikeSpawner
   m_TagString: Untagged
@@ -272,24 +272,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &79735094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79735093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5b376d2f4c5f45b48b609c1d7786559, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 2145822279572506158, guid: c3e345037a57447018e9a290353d4dd7, type: 3}
-  spawnRate: 2
-  minY: -0.72
-  maxY: -0.72
-  moveSpeed: 6
-  destroyDelay: 4
 --- !u!4 &79735095
 Transform:
   m_ObjectHideFlags: 0
@@ -305,6 +287,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &79735096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79735093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda879825d7e84de08eb32b115ea6e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 2145822279572506158, guid: c3e345037a57447018e9a290353d4dd7, type: 3}
+  spawnRate: 2
+  minY: -0.72
+  maxY: -0.72
+  moveSpeed: 4
+  destroyDelay: 4
+  gm: {fileID: 196904512}
 --- !u!1 &196904511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,6 +2057,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CloudSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 5160007775120808046, guid: 767131a83c4ec4d2eb12da73245bae0a, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 196904512}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/// <summary>
-/// being used for visual purposes, it spawns clouds :)
-/// </summary>
-public class CloudSpawner : MonoBehaviour
+
+public class SpikeSpawner : MonoBehaviour
 {
     public GameObject prefabToSpawn;
     [SerializeField] private float spawnRate;
@@ -27,15 +25,14 @@ public class CloudSpawner : MonoBehaviour
             if (gm.score % 4 == 0 && gm.score < 17)
             {
                 moveSpeed++;
-                spawnRate++;
             }
 
             float randomY = Random.Range(minY, maxY);
 
-            
+
             GameObject spawnedObject = Instantiate(prefabToSpawn, new Vector2(transform.position.x, randomY), Quaternion.identity);
 
-            
+
             Rigidbody2D rb = spawnedObject.AddComponent<Rigidbody2D>();
             rb.gravityScale = 0f;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
