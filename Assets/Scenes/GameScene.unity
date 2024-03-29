@@ -2102,24 +2102,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1610257243}
     - target: {fileID: 2736890442965402608, guid: 009b816e1538b461c9bbdd6e07803713, type: 3}
-      propertyPath: jumpSfx
-      value: 
-      objectReference: {fileID: 8300000, guid: 5ee78f158d3c649c1903ec59d91d6c5b, type: 3}
-    - target: {fileID: 2736890442965402608, guid: 009b816e1538b461c9bbdd6e07803713, type: 3}
-      propertyPath: deathSfx
-      value: 
-      objectReference: {fileID: 8300000, guid: 047d85cbeb2134ab4a2749b61cf33551, type: 3}
-    - target: {fileID: 2736890442965402608, guid: 009b816e1538b461c9bbdd6e07803713, type: 3}
-      propertyPath: scoreSfx
-      value: 
-      objectReference: {fileID: 8300000, guid: a5c3538e63ac74b0fbf00a2402df4896, type: 3}
-    - target: {fileID: 2736890442965402608, guid: 009b816e1538b461c9bbdd6e07803713, type: 3}
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 1327371230}
     - target: {fileID: 8554381832500437126, guid: 009b816e1538b461c9bbdd6e07803713, type: 3}
       propertyPath: m_Name
       value: DinoBlack
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554381832500437126, guid: 009b816e1538b461c9bbdd6e07803713, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8888626252365809891, guid: 009b816e1538b461c9bbdd6e07803713, type: 3}
       propertyPath: m_LocalPosition.x
