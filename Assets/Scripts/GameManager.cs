@@ -13,8 +13,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject pauseButton;
     public GameObject pauseScreen;
+    public GameObject skinScreen;
 
-    void Start()
+    private void Start()
     {
         score = 0;
         scoreText.text = score.ToString();
@@ -65,5 +66,10 @@ public class GameManager : MonoBehaviour
     public void goMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void CloseSkinPanel()
+    {
+        skinScreen.SetActive(false);
     }
 }

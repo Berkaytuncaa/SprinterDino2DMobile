@@ -16,6 +16,10 @@ public class Dino : MonoBehaviour
     public AudioClip scoreSfx;
     public AudioClip deathSfx;
 
+    private bool _isSelected;
+
+    private GameObject _selectedChar;
+
     [SerializeField] private float jumpForce;
 
     private bool _isGrounded;
@@ -24,10 +28,24 @@ public class Dino : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         Time.timeScale = 1;
+        _isSelected = false;
+    }
+
+    public void SelectChar(GameObject selectedChar)
+    {
+        _isSelected = true;
+        _selectedChar = selectedChar;
+        _selectedChar.SetActive(true);
+        gm.CloseSkinPanel();
     }
 
     private void Update()
     {
+        if (_isSelected)
+        {
+            Time.timeScale = 0;
+        }
+
         if (Input.GetMouseButtonDown(0) && _isGrounded)
         {
             Jump();
