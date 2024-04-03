@@ -1239,6 +1239,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5227737417722146566, guid: 293b7d67713334500a8445cfd2a6527d, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 196904512}
+    - target: {fileID: 5227737417722146566, guid: 293b7d67713334500a8445cfd2a6527d, type: 3}
+      propertyPath: src
+      value: 
+      objectReference: {fileID: 1610257243}
+    - target: {fileID: 5227737417722146566, guid: 293b7d67713334500a8445cfd2a6527d, type: 3}
+      propertyPath: deathSfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 047d85cbeb2134ab4a2749b61cf33551, type: 3}
+    - target: {fileID: 5227737417722146566, guid: 293b7d67713334500a8445cfd2a6527d, type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 1327371230}
     - target: {fileID: 5795620687889679307, guid: 293b7d67713334500a8445cfd2a6527d, type: 3}
       propertyPath: m_Name
       value: DinoPurple
@@ -1733,6 +1749,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9006691013940227810, guid: d89c50365633f4e608d68400f7a0b676, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 196904512}
+    - target: {fileID: 9006691013940227810, guid: d89c50365633f4e608d68400f7a0b676, type: 3}
+      propertyPath: src
+      value: 
+      objectReference: {fileID: 1610257243}
+    - target: {fileID: 9006691013940227810, guid: d89c50365633f4e608d68400f7a0b676, type: 3}
+      propertyPath: deathScreen
+      value: 
+      objectReference: {fileID: 1327371230}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

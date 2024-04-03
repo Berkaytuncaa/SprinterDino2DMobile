@@ -16,7 +16,7 @@ public class Dino : MonoBehaviour
     public AudioClip scoreSfx;
     public AudioClip deathSfx;
 
-    private bool _isSelected;
+    private bool _isSelected = false;
 
     private GameObject _selectedChar;
 
@@ -28,7 +28,6 @@ public class Dino : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody2D>();
         Time.timeScale = 1;
-        _isSelected = false;
     }
 
     public void SelectChar(GameObject selectedChar)
@@ -41,7 +40,7 @@ public class Dino : MonoBehaviour
 
     private void Update()
     {
-        if (_isSelected)
+        if (!_isSelected)
         {
             Time.timeScale = 0;
         }
