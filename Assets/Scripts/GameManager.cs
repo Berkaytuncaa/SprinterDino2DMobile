@@ -39,10 +39,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /*public void ResetHighScore()
+    public void ResetHighScore()
     {
         PlayerPrefs.DeleteAll();
-    }*/
+    }
 
     public void RestartGame()
     {
